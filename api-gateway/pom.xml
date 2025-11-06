@@ -18,6 +18,17 @@
         <spring-cloud.version>2025.0.0</spring-cloud.version>
     </properties>
     <dependencies>
+        <!--
+Source - https://stackoverflow.com/questions/67507452/no-spring-config-import-property-has-been-defined
+Posted by Dan
+Retrieved 2025-11-06, License - CC BY-SA 4.0
+-->
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
