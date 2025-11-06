@@ -1,4 +1,4 @@
-package com.example.auth;
+package com.example.auth.login;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

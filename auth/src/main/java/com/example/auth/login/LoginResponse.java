@@ -1,4 +1,4 @@
-package com.example.auth;
+package com.example.auth.login;
 import lombok.*;
 
 @NoArgsConstructor

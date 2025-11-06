@@ -35,6 +35,11 @@ spring:
           predicates:
             - Path=/api/results/**
 
+        - id: weather
+            uri: lb://auth-service
+            predicates:
+              - Path=/api/weather/**
+
 # Actuator configuration
 management:
   endpoints:

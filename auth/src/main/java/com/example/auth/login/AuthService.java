@@ -1,4 +1,4 @@
-package com.example.auth;
+package com.example.auth.login;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
