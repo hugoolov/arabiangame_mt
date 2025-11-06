@@ -5,30 +5,25 @@ spring:
   application:
     name: api-gateway
   cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        health-check-path: /actuator/health
+        prefer-ip-address: true
     gateway:
       routes:
         - id: auth-service
-          uri: http://auth-service:8083
+          uri: lb://auth-service
           predicates:
             - Path=/api/auth/**
 
         - id: game-logic
-          uri: http://game-logic:8081
+          uri: lb://game-logic
           predicates:
             - Path=/api/game/**
 
         - id: game-results
-          uri: http://game-results:8082
+          uri: lb://game-results
           predicates:
             - Path=/api/results/**
-
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-            allowedHeaders: "*"
