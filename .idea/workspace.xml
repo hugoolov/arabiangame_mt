@@ -4,38 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54588f3d-6ee4-4487-ab21-93d87754a235" name="Changes" comment="felles">
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/GameLogicApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/card/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/card/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/card/CardRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/card/CardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/card/Suite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/decks/Deck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/decks/DeckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/decks/DeckDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/decks/DeckRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/decks/DeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/CompleteTurnRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/GameResultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/GameStateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/GameStateRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/GameStateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/GameStateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/java/com/example/game_logic/gamestate/PlayerTurnRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/game_logic/src/test/java/com/example/game_logic/GameLogicApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="54588f3d-6ee4-4487-ab21-93d87754a235" name="Changes" comment="docker lagt til på auth">
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/example/api_gateway/ApiGatewayApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762415167455</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="docker lagt til på auth">
+      <option name="closed" value="true" />
+      <created>1762420327404</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762420327404</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +169,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kgk" />
     <MESSAGE value="felles" />
-    <option name="LAST_COMMIT_MESSAGE" value="felles" />
+    <MESSAGE value="docker lagt til på auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker lagt til på auth" />
   </component>
 </project>
