@@ -11,6 +11,8 @@ spring:
       discovery:
         health-check-path: /actuator/health
         prefer-ip-address: true
+        enabled: true
+        register: true
     gateway:
       routes:
         - id: auth-service
@@ -21,9 +23,23 @@ spring:
         - id: game-logic
           uri: lb://game-logic
           predicates:
-            - Path=/api/game/**
+            - Path=/api/game/**,/api/cards/**,/api/decks/**
 
         - id: game-results
           uri: lb://game-results
           predicates:
             - Path=/api/results/**
+
+# Actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+  health:
+    consul:
+      enabled: true
