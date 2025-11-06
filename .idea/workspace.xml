@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54588f3d-6ee4-4487-ab21-93d87754a235" name="Changes" comment="kgk">
+    <list default="true" id="54588f3d-6ee4-4487-ab21-93d87754a235" name="Changes" comment="felles">
       <change afterPath="$PROJECT_DIR$/game_logic/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game_logic/src/main/java/com/example/game_logic/config/RabbitMQConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game_logic/src/main/java/com/example/game_logic/gamestate/GameResultMessage.java" afterDir="false" />
@@ -27,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/game_logic" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -36,12 +36,12 @@
     &quot;assignee&quot;: &quot;hugoolov&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hugoolov/arabiangame_mt.git",
-    "accountId": "7934cce9-c476-4cf5-bdec-c35c082c6511"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hugoolov/arabiangame_mt.git&quot;,
+    &quot;accountId&quot;: &quot;7934cce9-c476-4cf5-bdec-c35c082c6511&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -58,10 +58,10 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Game__logic",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/hugoharnaes/school/Microtjenester/arabiangame_mt/gameresult",
+    "last_opened_file_path": "/Users/hugoharnaes/school/Microtjenester/arabiangame_mt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -110,7 +110,31 @@
       <option name="project" value="LOCAL" />
       <updated>1759150854079</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="felles">
+      <option name="closed" value="true" />
+      <created>1762414610330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762414610330</updated>
+    </task>
+    <task id="LOCAL-00003" summary="felles">
+      <option name="closed" value="true" />
+      <created>1762414683903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762414683903</updated>
+    </task>
+    <task id="LOCAL-00004" summary="felles">
+      <option name="closed" value="true" />
+      <created>1762414702549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762414702549</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kgk" />
-    <option name="LAST_COMMIT_MESSAGE" value="kgk" />
+    <MESSAGE value="felles" />
+    <option name="LAST_COMMIT_MESSAGE" value="felles" />
   </component>
 </project>
