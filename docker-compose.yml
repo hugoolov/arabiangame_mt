@@ -42,6 +42,15 @@ services:
     volumes:
       - auth-data:/var/lib/postgresql/data
 
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - auth-service
+      - game-logic
+      - game-results
+
   game-logic:
     build: ./game_logic
     ports:

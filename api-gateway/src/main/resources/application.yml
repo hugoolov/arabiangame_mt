@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: http://auth-service:8083
+          predicates:
+            - Path=/api/auth/**
+
+        - id: game-logic
+          uri: http://game-logic:8081
+          predicates:
+            - Path=/api/game/**
+
+        - id: game-results
+          uri: http://game-results:8082
+          predicates:
+            - Path=/api/results/**
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
