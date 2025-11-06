@@ -4,3 +4,5 @@
 *.iml
 *.ipr
 /.idea/
+/gameresult/target/
+/gameresult/target/
