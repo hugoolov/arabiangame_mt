@@ -1,5 +1,9 @@
-package com.example.auth.weather;
+package com.example.weather;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.client.RestClientException;
@@ -13,8 +17,8 @@ public class WeatherService {
     private final ObjectMapper objectMapper;
 
     // User-Agent is REQUIRED by yr.no API
-    private static final String USER_AGENT = "ArabianCardGame/1.0 (your-email@example.com)";
-    private static final String YR_API_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact";
+    private static final String USER_AGENT = "ArabianCardGame/1.0 (hugo@@harnaes.no)";
+    private static final String YR_API_URL = "https://api.met.no/weatherapi/nowcast/2.0/complete";
 
     public WeatherService() {
         this.restTemplate = new RestTemplate();
@@ -31,15 +35,13 @@ public class WeatherService {
         try {
             String url = String.format("%s?lat=%.4f&lon=%.4f", YR_API_URL, lat, lon);
 
-            // yr.no requires a User-Agent header
-            org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
+            HttpHeaders headers = new HttpHeaders();
             headers.set("User-Agent", USER_AGENT);
+            HttpEntity<String> entity = new HttpEntity<>(headers);
 
-            org.springframework.http.HttpEntity<String> entity = new org.springframework.http.HttpEntity<>(headers);
-
-            org.springframework.http.ResponseEntity<String> response = restTemplate.exchange(
+            ResponseEntity<String> response = restTemplate.exchange(
                     url,
-                    org.springframework.http.HttpMethod.GET,
+                    HttpMethod.GET,
                     entity,
                     String.class
             );
@@ -51,6 +53,7 @@ public class WeatherService {
             return createErrorResponse();
         }
     }
+
 
     /**
      * Parse the yr.no JSON response

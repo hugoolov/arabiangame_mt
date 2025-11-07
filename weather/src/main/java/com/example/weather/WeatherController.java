@@ -1,4 +1,4 @@
-package com.example.auth.weather;
+package com.example.weather;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

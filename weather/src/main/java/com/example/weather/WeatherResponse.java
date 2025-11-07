@@ -1,4 +1,4 @@
-package com.example.auth.weather;
+package com.example.weather;
 
 import lombok.*;
 

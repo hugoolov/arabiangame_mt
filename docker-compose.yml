@@ -107,6 +107,15 @@ services:
       SPRING_CLOUD_CONSUL_HOST: consul
       SPRING_CLOUD_CONSUL_PORT: 8500
 
+  weather:
+    build: ./weather
+    ports:
+      - "8084:8084"
+    depends_on:
+      - consul
+    environment:
+      SPRING_CLOUD_CONSUL_HOST: consul
+      SPRING_CLOUD_CONSUL_PORT: 8500
 volumes:
   game-logic-data:
   game-results-data:

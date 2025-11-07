@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: api-gateway
-  # ADD THIS - Required for Spring Cloud 2021.0.0+
   config:
     import: "optional:consul:"
   cloud:
@@ -19,26 +18,30 @@ spring:
         enabled: true
         register: true
     gateway:
-      routes:
-        - id: auth-service
-          uri: lb://auth-service
-          predicates:
-            - Path=/api/auth/**
+      server:
+        webflux:
+          routes:
+            - id: auth-service
+              uri: lb://auth-service
+              predicates:
+                - Path=/api/auth/**
 
-        - id: game-logic
-          uri: lb://game-logic
-          predicates:
-            - Path=/api/game/**,/api/cards/**,/api/decks/**
+            - id: game-logic
+              uri: lb://game-logic
+              predicates:
+                - Path=/api/game/**
+                - Path=/api/cards/**
+                - Path=/api/decks/**
 
-        - id: game-results
-          uri: lb://game-results
-          predicates:
-            - Path=/api/results/**
+            - id: game-results
+              uri: lb://game-results
+              predicates:
+                - Path=/api/results/**
 
-        - id: weather
-            uri: lb://auth-service
-            predicates:
-              - Path=/api/weather/**
+            - id: weather
+              uri: lb://weather
+              predicates:
+                - Path=/api/weather/**
 
 # Actuator configuration
 management:
