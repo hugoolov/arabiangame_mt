@@ -18,31 +18,26 @@ spring:
         enabled: true
         register: true
     gateway:
-      server:
-        webflux:
-          routes:
-            - id: auth-service
-              uri: lb://auth-service
-              predicates:
-                - Path=/api/auth/**
+      routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/auth/**
 
-            - id: game-logic
-              uri: lb://game-logic
-              predicates:
-                - Path=/api/game/**
-                - Path=/api/cards/**
-                - Path=/api/decks/**
+        - id: game-logic
+          uri: lb://game-logic
+          predicates:
+            - Path=/api/game/**,/api/cards/**,/api/decks/**
 
-            - id: game-results
-              uri: lb://game-results
-              predicates:
-                - Path=/api/results/**
+        - id: game-results
+          uri: lb://game-results
+          predicates:
+            - Path=/api/results/**
 
-            - id: weather
-              uri: lb://weather
-              predicates:
-                - Path=/api/weather/**
-                - Header=Accept, application/json
+        - id: weather
+          uri: lb://weather
+          predicates:
+            - Path=/api/weather/**
 
 # Actuator configuration
 management:
