@@ -9,6 +9,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.reactive.CorsConfigurationSource;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Configuration
@@ -29,10 +30,21 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cors = new CorsConfiguration();
-        cors.setAllowedOriginPatterns(List.of("*")); // Allow all origins
-        cors.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        cors.setAllowedHeaders(List.of("*"));
+
+        // Allow specific origin instead of wildcard pattern
+        cors.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://localhost:3000"));
+
+        // Allow common HTTP methods
+        cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+
+        // Allow all headers
+        cors.setAllowedHeaders(Arrays.asList("*"));
+
+        // Allow credentials
         cors.setAllowCredentials(true);
+
+        // How long the response from a pre-flight request can be cached
+        cors.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", cors);
