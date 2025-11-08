@@ -9,4 +9,5 @@
 .idea/
 /weather/mvnw.cmd
 /weather/mvnw
-/.idea/
+
+/frontend/package-lock.json
